@@ -1,5 +1,6 @@
 <script lang="ts">
   const REPO = 'https://github.com/codewiththiha/OpenSlides'
+  const RELEASES = `${REPO}/releases`
 </script>
 
 <section id="open-source">
@@ -18,9 +19,10 @@
 
   <h3 id="os-build">Build it yourself</h3>
   <p>
-    There are <strong>no prebuilt macOS, Linux, or Windows installers yet</strong> — for
-    now the way to run it is from source. You need Node.js 20 or newer, a stable Rust
-    toolchain with Cargo, and the platform requirements for Tauri 2. Then:
+    Prebuilt macOS, Windows, and Linux installers are available on
+    <a href={RELEASES} target="_blank" rel="noopener" style:color="var(--ink)" style:text-decoration="none" style:border-bottom="1px solid var(--line)">GitHub Releases</a>.
+    Or build it yourself: you need Node.js 20 or newer, a stable Rust toolchain with
+    Cargo, and the platform requirements for Tauri 2. Then:
   </p>
   <div class="codeblock"><span class="cmt"># install frontend dependencies</span>
 npm install
