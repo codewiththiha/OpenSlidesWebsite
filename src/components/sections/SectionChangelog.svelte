@@ -1,29 +1,34 @@
 <script lang="ts">
   import releases from '../../data/releases.json'
 
-  const dateFormatter = new Intl.DateTimeFormat('en', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    timeZone: 'UTC',
-  })
-
-  function formatReleaseDate(date: string) {
-    return dateFormatter.format(new Date(`${date}T00:00:00Z`))
-  }
-
   function releaseId(version: string) {
     return `ch-${version.replace(/[^a-z0-9]+/gi, '-')}`
+  }
+
+  function whatsNewItems(markdown: string) {
+    return markdown
+      .split('\n')
+      .map((line) => line.replace(/^\s*-\s*/, '').trim())
+      .filter(Boolean)
   }
 </script>
 
 <section id="changelog">
   <h2>Changelog</h2>
-  {#each releases as release}
-    <section class="release-entry" id={releaseId(release.version)}>
-      <h3>{release.version}</h3>
-      <p class="release-date">Released {formatReleaseDate(release.date)}</p>
-      <div class="release-notes">{release.whatsNew}</div>
-    </section>
-  {/each}
+  <div class="release-history">
+    {#each releases as release}
+      <section class="release-entry" id={releaseId(release.version)}>
+        <div class="release-meta">
+          <span class="release-version">v{release.version}</span>
+          <time datetime={release.date}>{release.date}</time>
+        </div>
+        <h3>What&apos;s new</h3>
+        <ul class="release-notes">
+          {#each whatsNewItems(release.whatsNew) as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+      </section>
+    {/each}
+  </div>
 </section>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { scrollState, initScroll } from '../composables/usePageScroll.svelte'
   import ThemeToggle from './ThemeToggle.svelte'
+  import releases from '../data/releases.json'
 
   initScroll()
   const RELEASES = 'https://github.com/codewiththiha/OpenSlides/releases'
@@ -13,5 +14,5 @@
   <span class="spacer"></span>
   <a class="topbar-download" href={RELEASES} target="_blank" rel="noopener">Download</a>
   <ThemeToggle />
-  <span class="ver">v1.0.1</span>
+  <span class="ver">v{releases[0]?.version ?? '—'}</span>
 </header>

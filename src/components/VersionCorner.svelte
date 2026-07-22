@@ -1,6 +1,7 @@
 <script lang="ts">
   import { scrollState, initScroll } from '../composables/usePageScroll.svelte'
   import ThemeToggle from './ThemeToggle.svelte'
+  import releases from '../data/releases.json'
 
   initScroll()
   /** Fades out once the sticky topbar (which carries its own toggle) slides in. */
@@ -8,6 +9,6 @@
 </script>
 
 <div class="corner" class:hide={hidden}>
-  <span>v1.0.1</span>
+  <span>v{releases[0]?.version ?? '—'}</span>
   <ThemeToggle />
 </div>
