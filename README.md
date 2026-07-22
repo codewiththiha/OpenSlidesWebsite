@@ -6,7 +6,7 @@ OpenSlides is a direct alternative to [codeslides.app](https://codeslides.app). 
 
 ## What visitors can do
 
-- Download OpenSlides for macOS, Windows, and Linux.
+- Download OpenSlides for macOS and Windows.
 - Learn how code highlights and transitions support clearer technical storytelling.
 - Explore presentation, search, local-project, and keyboard-control features.
 - Read the latest release and browse the release history.

@@ -15,7 +15,7 @@
     A free, open-source, offline alternative to <b>codeslides.app</b>. Create polished
     code transitions, tell a clearer technical story, and keep every project on your machine.
   </p>
-  <p class="platforms">Available for macOS, Windows, and Linux.</p>
+  <p class="platforms">Available for macOS and Windows.</p>
 
   <div class="cta-row">
     <a class="btn primary" href={RELEASES} target="_blank" rel="noopener">

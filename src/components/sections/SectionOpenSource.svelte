@@ -13,7 +13,7 @@
 
   <h3 id="os-download">Download OpenSlides</h3>
   <p>
-    Choose the latest installer for macOS, Windows, or Linux from
+    Choose the latest installer for macOS or Windows from
     <a href={RELEASES} target="_blank" rel="noopener" style:color="var(--ink)" style:text-decoration="none" style:border-bottom="1px solid var(--line)">GitHub Releases</a>.
     Each release includes the desktop packages and its release notes.
   </p>
