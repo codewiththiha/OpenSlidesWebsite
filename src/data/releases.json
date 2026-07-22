@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.0.21",
+    "date": "2026-07-22",
+    "whatsNew": "- Export and import presentations safely, including repeat imports of the same file.",
+    "fullNotes": "## What's New\n\n- Export and import presentations safely, including repeat imports of the same file.\n\n## Fixes\n\n- Imported slides now receive fresh IDs, preventing database conflicts when an exported presentation is imported back into the same app.\n- Import and export preserve current-slide selection, highlights, section groups, theme settings, code layout, and presentation preferences.",
+    "updatedAt": "2026-07-22T06:47:17.278Z"
+  },
+  {
     "version": "1.0.2",
     "date": "2026-07-22",
     "whatsNew": "- Create stronger code presentations with a redesigned code-cover style for slides and presentations.\n- Browse syntax themes through live code previews and preview a theme on your active slide before choosing it.\n- Use a pure black code background when preparing presentations for video compositing.\n- Move through decks faster with a compact slide rail, visual slide navigation, and improved multi-slide actions.",
