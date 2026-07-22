@@ -1,65 +1,46 @@
 # OpenSlides Website
 
-Landing page for **OpenSlides** — a free, open-source, offline-first desktop app for
-code-focused slide decks. A direct, drop-in alternative to codeslides.app.
+The OpenSlides website introduces the desktop app, explains how it helps code-focused presenters, and links visitors to source code and downloadable releases.
 
-Built with **Svelte 5 + TypeScript + Vite + Tailwind CSS v4**. The design was originally
-delivered as a single self-contained HTML file; this project keeps the **exact look** (all
-original CSS is preserved verbatim in `src/style.css`, kept unlayered so it wins over
-Tailwind's Preflight) while modularizing the markup and behavior into small,
-single-responsibility Svelte components.
+## What the site communicates
+
+- Why OpenSlides is useful for talks, workshops, demos, and technical teaching.
+- How local-first projects keep presentation work available offline.
+- The editor, highlighting, search, presentation, and persistence features.
+- The current release and a browsable release history.
+- Links to GitHub, releases, documentation, and the MIT license.
+
+## How it works
+
+The site is a fast, responsive single-page experience. Its content is split into focused sections, with a sticky navigation bar and a right-side table of contents on larger screens. The Changelog displays releases newest first and keeps earlier release notes available below the latest version.
+
+## Tech stack
+
+- **Framework:** Svelte 5 and TypeScript
+- **Build tool:** Vite
+- **Styling:** Tailwind CSS v4 with a custom editorial design system
+- **Release content:** JSON data rendered directly in the Changelog
 
 ## Project structure
 
-```
+```text
 src/
-├── App.svelte                    # assembles everything back together
-├── style.css                     # original design CSS (verbatim, unlayered over Tailwind) + :root/[data-theme] tokens
-├── composables/
-│   ├── useTheme.svelte.ts        # singleton reactive theme (persisted, no-flash)
-│   └── usePageScroll.svelte.ts   # shared singleton scroll state (scrollY + hero height)
-├── data/
-│   └── toc.ts                    # single source of truth for the section indicator
-└── components/
-    ├── VersionCorner.svelte      # fixed version chip (hides when topbar appears)
-    ├── TopBar.svelte             # sticky nav bar (slides in past the hero)
-    ├── HeroSection.svelte        # hero: wordmark, torus, command block, CTAs
-    ├── TorusCanvas.svelte        # animated halftone torus (auto-rotate + parallax)
-    ├── CommandBlock.svelte       # copy-to-clipboard command block
-    ├── CopyButton.svelte         # reusable clipboard button (async + fallback)
-    ├── ThemeToggle.svelte        # sun/moon dark/light toggle (shared state)
-    ├── TableOfContents.svelte    # right-hand section indicator + scrollspy
-    ├── SiteFooter.svelte
-    └── sections/                 # one component per article section
-        ├── SectionWhy.svelte
-        ├── SectionEditor.svelte
-        ├── SectionHighlighting.svelte
-        ├── SectionSteps.svelte
-        ├── SectionSearch.svelte
-        ├── SectionPresentation.svelte
-        ├── SectionPersistence.svelte
-        ├── SectionOpenSource.svelte
-        └── SectionChangelog.svelte
+├── App.svelte             # page composition
+├── components/            # reusable interface and content sections
+├── composables/           # shared theme and scroll behavior
+├── data/                  # navigation and release-history content
+└── style.css              # visual design tokens and responsive styles
 ```
 
 ## Develop
 
 ```bash
 npm install
-npm run dev        # start the Vite dev server
-npm run check      # type-check with svelte-check + tsc
-npm run build      # production build to dist/
-npm run preview    # preview the production build
+npm run dev
+npm run check
+npm run build
+npm run preview
 ```
-
-
-## Automated releases
-
-The desktop release workflow runs when a `v*` tag is pushed in the
-[OpenSlides app repository](https://github.com/codewiththiha/OpenSlides). It receives the
-machine-readable release payload and opens a pull request updating
-`src/data/releases.json`. Each incoming release is prepended to the history (and replaces only an existing
-entry with the same version), so the changelog retains every released version.
 
 ## License
 
