@@ -1,0 +1,33 @@
+name: Update Release Notes
+
+on:
+  repository_dispatch:
+    types: [update_release_notes]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Write latest release data
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: node scripts/write-release-note.mjs
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'chore: update release notes to ${{ github.event.client_payload.version }}'
+          commit-message: 'chore: update release notes ${{ github.event.client_payload.version }}'
+          branch: release-notes/${{ github.event.client_payload.version }}
+          delete-branch: true
+          body: |
+            Automated release-note update from OpenSlides.
+
+            Version: ${{ github.event.client_payload.version }}

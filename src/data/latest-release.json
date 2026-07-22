@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0-beta.1",
+  "date": "2026-07-22",
+  "whatsNew": "- First public beta of OpenSlides.\n- Create local-first code slide decks with Shiki syntax highlighting and stepped highlights.\n- Present with Magic Move transitions, slide search, autoplay, and light or dark themes.",
+  "fullNotes": "## What's New\n\n- First public beta of OpenSlides.\n- Create local-first code slide decks with Shiki syntax highlighting and stepped highlights.\n- Present with Magic Move transitions, slide search, autoplay, and light or dark themes.\n\n## Full changelog\n\n- Local-first project and slide management backed by SQLite.\n- Shared-worker Shiki syntax highlighting with lazy language and theme loading.\n- Stepped highlights with Magic Move transitions and presentation autoplay.\n- FTS5 slide search, lazy thumbnails with hover previews, and resizable panels.\n- Per-slide undo and redo plus an exactly-once quit handshake that flushes pending edits.",
+  "updatedAt": "2026-07-22T00:00:00.000Z"
+}
