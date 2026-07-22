@@ -1,36 +1,27 @@
 # OpenSlides Website
 
-The OpenSlides website introduces the desktop app, explains how it helps code-focused presenters, and links visitors to source code and downloadable releases.
+The website for **OpenSlides** — a free, offline desktop app for content creators, educators, and developers who want to present code beautifully.
 
-## What the site communicates
+OpenSlides is a direct alternative to [codeslides.app](https://codeslides.app). It helps people turn code into polished slide decks with stepped highlights and smooth transitions, while keeping projects on their own computer.
 
-- Why OpenSlides is useful for talks, workshops, demos, and technical teaching.
-- How local-first projects keep presentation work available offline.
-- The editor, highlighting, search, presentation, and persistence features.
-- The current release and a browsable release history.
-- Links to GitHub, releases, documentation, and the MIT license.
+## What visitors can do
 
-## How it works
+- Download OpenSlides for macOS, Windows, and Linux.
+- Learn how code highlights and transitions support clearer technical storytelling.
+- Explore presentation, search, local-project, and keyboard-control features.
+- Read the latest release and browse the release history.
+- Find the source repository, releases, and license.
 
-The site is a fast, responsive single-page experience. Its content is split into focused sections, with a sticky navigation bar and a right-side table of contents on larger screens. The Changelog displays releases newest first and keeps earlier release notes available below the latest version.
+## Design approach
+
+The site uses a calm, editorial technical style: monochrome colors, compact monospace type, thin separators, generous reading space, and focused calls to action. It is designed to let the product and its code-presentation workflow take center stage.
 
 ## Tech stack
 
 - **Framework:** Svelte 5 and TypeScript
 - **Build tool:** Vite
-- **Styling:** Tailwind CSS v4 with a custom editorial design system
-- **Release content:** JSON data rendered directly in the Changelog
-
-## Project structure
-
-```text
-src/
-├── App.svelte             # page composition
-├── components/            # reusable interface and content sections
-├── composables/           # shared theme and scroll behavior
-├── data/                  # navigation and release-history content
-└── style.css              # visual design tokens and responsive styles
-```
+- **Styling:** Tailwind CSS v4 with custom responsive CSS
+- **Content:** modular Svelte sections and JSON-backed release history
 
 ## Develop
 

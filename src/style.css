@@ -104,17 +104,13 @@ a{color:inherit;}
 .topbar .brand{font-weight:800;font-size:15px;letter-spacing:-.01em;white-space:nowrap;}
 .topbar .spacer{flex:1;}
 .topbar .ver{font-size:11px;color:var(--muted-2);white-space:nowrap;}
-.topbar .mini-cmd{display:flex;align-items:stretch;border:1px solid var(--chip-line);border-radius:8px;overflow:hidden;background:var(--chip);max-width:46vw;}
-.topbar .mini-cmd code{
-  font-size:12px;color:var(--ink-soft);padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+.topbar-download{
+  border:1px solid var(--chip-line);border-radius:8px;background:var(--surface);
+  color:var(--ink-soft);font-size:11px;padding:7px 11px;text-decoration:none;
+  transition:color .15s ease,background-color .2s ease,border-color .2s ease;
 }
-.topbar .mini-cmd button{
-  border:0;border-left:1px solid var(--chip-line);background:var(--surface);color:var(--muted);
-  font-family:inherit;font-size:11px;padding:0 12px;cursor:pointer;
-  transition:color .15s ease,background-color .2s ease;
-}
-.topbar .mini-cmd button:hover{color:var(--ink);}
-@media (max-width:760px){ .topbar .mini-cmd{display:none;} }
+.topbar-download:hover{color:var(--ink);background:var(--btn-hover-bg);border-color:var(--btn-hover-border);}
+@media (max-width:560px){ .topbar-download{display:none;} }
 
 /* ---------- layout ---------- */
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
@@ -138,6 +134,7 @@ a{color:inherit;}
 .subtitle{color:var(--muted);font-size:15px;margin:0;max-width:46ch;}
 .position{color:var(--muted-2);font-size:12.5px;margin:10px 0 0;max-width:54ch;line-height:1.55;}
 .position b{color:var(--ink-soft);font-weight:500;}
+.platforms{color:var(--muted);font-size:12px;margin:10px 0 0;}
 
 .cmdblock{
   margin:30px 0 0;

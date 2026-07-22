@@ -79,6 +79,7 @@ export const tocData: TocSection[] = [
     id: 'open-source',
     label: 'Open source',
     children: [
+      { id: 'os-download', label: 'Download OpenSlides' },
       { id: 'os-mit', label: 'MIT license' },
       { id: 'os-build', label: 'Build from source' },
     ],
