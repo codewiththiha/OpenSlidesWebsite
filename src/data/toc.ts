@@ -84,6 +84,6 @@ export const tocData: TocSection[] = [
   {
     id: 'changelog',
     label: 'Changelog',
-    children: [{ id: 'ch-1-0-0-beta-1', label: '1.0.0-beta.1' }],
+    children: [{ id: 'ch-1-0-1', label: '1.0.1' }],
   },
 ]

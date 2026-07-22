@@ -8,6 +8,6 @@
 </script>
 
 <div class="corner" class:hide={hidden}>
-  <span>v1.0.0-beta.1</span>
+  <span>v1.0.1</span>
   <ThemeToggle />
 </div>

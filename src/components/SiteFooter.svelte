@@ -4,7 +4,7 @@
 
 <footer class="wrap">
   <div class="foot">
-    <span>OpenSlides · MIT · v1.0.0-beta.1</span>
+    <span>OpenSlides · MIT · v1.0.1</span>
     <span>
       <a href={REPO} target="_blank" rel="noopener">GitHub</a>
       &nbsp;·&nbsp;

@@ -17,5 +17,5 @@
     <CopyButton text={CLONE_CMD} label="copy" />
   </div>
   <ThemeToggle />
-  <span class="ver">v1.0.0-beta.1</span>
+  <span class="ver">v1.0.1</span>
 </header>
