@@ -3,6 +3,8 @@ export interface TocChild {
   label: string
 }
 
+import releases from './releases.json'
+
 export interface TocSection {
   id: string
   label: string
@@ -84,6 +86,9 @@ export const tocData: TocSection[] = [
   {
     id: 'changelog',
     label: 'Changelog',
-    children: [{ id: 'ch-1-0-1', label: '1.0.1' }],
+    children: releases.map((release) => ({
+      id: `ch-${release.version.replace(/[^a-z0-9]+/gi, '-')}`,
+      label: release.version,
+    })),
   },
 ]

@@ -58,8 +58,8 @@ npm run preview    # preview the production build
 The desktop release workflow runs when a `v*` tag is pushed in the
 [OpenSlides app repository](https://github.com/codewiththiha/OpenSlides). It receives the
 machine-readable release payload and opens a pull request updating
-`src/data/latest-release.json`. The changelog section renders the payload's `whatsNew`
-text directly, so the website and desktop release remain in sync.
+`src/data/releases.json`. Each incoming release is prepended to the history (and replaces only an existing
+entry with the same version), so the changelog retains every released version.
 
 ## License
 

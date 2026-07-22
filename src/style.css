@@ -281,3 +281,10 @@ footer{padding:34px 0 56px;}
 .release-notes {
   white-space: pre-line;
 }
+
+/* Individual releases are retained as a newest-first changelog history. */
+.release-entry + .release-entry {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line-soft);
+}
